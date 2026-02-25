@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到用户界面</title>
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* 垂直堆叠 */
+    justify-content: center; /* 垂直居中 */
+    align-items: center;     /* 水平居中 */
+    background-color: #f0f2f5;
+}
+
+.h1 {
+    width: 400px;
+    padding: 20px;       /* 用内边距撑开盒子，比写死高度更灵活 */
+    color: white;        /* 文字改白色，深色背景才好看 */
+    background-color: #4f4d4d;
+    text-align: center;  /* 文字水平居中 */
+    border-radius: 8px;  /* 加点圆角，更有 UI 质感 */
+}
+
+.header {
+    height: 20px;
+    width: 400px;        /* 宽度和标题对齐 */
+    margin-top: 20px;    /* 两个盒子之间的间距 */
+    background-color: #323131;
+    border-radius: 4px;
+}
+    </style>
+    
+</head>
+<body>
+<div class="h1">
+     <h1>Welcome My Home</h1>
+</div>
+    <br>
+    <div class="header"></div>
+    
+</body>
+</html>

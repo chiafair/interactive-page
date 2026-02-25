@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名片</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        h1{
+            height: 50px;
+            width: 600px;
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+            height: 50px;
+        }
+       
+        
+         body {
+            /* 让整个 body 变成一个大容器，使 h1 居中 */
+            display: flex;
+            flex-direction: column; /* 元素垂直排列 */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5; /* 默认浅色背景 */
+            transition: background-color 0.4s ease; /* 背景平滑过渡 */
+        }
+        /* 2. 深色模式样式 */
+        body.dark-mode {
+            background-color: #2c3e50;
+        }
+           .button1 {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background: white;
+            font-weight: bold;
+        }
+        .end{
+             display: flex;
+            margin-top: 20px;
+            height: 50px;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+  
+
+<div class="header">
+    
+        <h1>个人资料</h1>
+</div>
+ <button id ="dark-demo" class="button1">暗夜模式</button>
+<div class="bodys">
+    <p>
+        姓名：<input type="text">
+        <br>
+        性别： 男<input type="radio" name="gender">  女<input type="radio" name="gender"> 
+        <br>
+        身份证号码：<input type="text">
+        <br>
+        城市选择 
+        <select>
+        <option >北京</option>
+        <option >上海</option>
+        <option >浙江</option>
+        <option >四川</option>
+        <option >安徽</option>
+        <option >江西</option>
+        <option >江苏</option>
+        <option >福建</option>
+        <option >广东</option>
+        <br> 
+     
+
+        </select>
+    </p>
+    </div>
+
+
+</div>
+<div class="end">
+    <button id ="end" class="button1">完成</button>
+</div>
+
+    <script>
+const btn = document.getElementById('dark-demo')
+const body = document.body
+ btn.onclick = function() {
+            // 在 body 上切换 dark-mode 这个类
+            body.classList.toggle('dark-mode');
+        };
+
+const ending = document.getElementById('end') 
+
+ending.onclick = function(){
+    window.location.href = "study1-2.html";
+}
+
+
+
+    </script>
+</body>
+</html>
+
