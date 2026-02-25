@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个交互网页</title>
+    <style>
+        /* CSS：设置基本的长相 */
+        body { text-align: center; padding-top: 50px; font-family: Arial; }
+        #count-display { font-size: 50px; }
+        button { padding: 10px 20px; font-size: 20px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1 id="count-display">0</h1>
+    <button id="like-btn">点赞</button>
+
+    <script>
+        // JS：赋予灵魂
+        let count = 0; // 1. 逻辑脑：存数字
+
+        // 2. 抓取：找到零件
+        const display = document.getElementById("count-display");
+        const btn = document.getElementById("like-btn");
+
+        // 3. 监听：等信号
+        btn.addEventListener("click", function() {
+            count = count + 1; // 4. 执行：加 1
+            
+            // 更新内容
+            display.innerText = count;
+
+            // 更新样式：如果点赞超过 10，文字变红
+            if (count >= 10) {
+                display.style.color = "red";
+                display.innerText = count + " (危险！)";
+            }
+        });
+    </script>
+</body>
+</html>
